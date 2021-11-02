@@ -29,7 +29,7 @@ public class Control {
 	
 	public void setCanal(int canal) {
 		if (tv.estado == true) {
-			if (canal >= 1 && canal <= 120) {
+			if (canal > 0 && canal < 120) {
 				tv.setCanal(canal);
 			}
 		}	
@@ -40,11 +40,11 @@ public class Control {
 		tv.setControl(this);
 	}
 	
-	public void setTV(TV tv) {
+	public void setTv(TV tv) {
 		this.tv = tv;
 	}
 	
-	public TV getTV() {
+	public TV getTv() {
 		return tv;
 	}
 }
