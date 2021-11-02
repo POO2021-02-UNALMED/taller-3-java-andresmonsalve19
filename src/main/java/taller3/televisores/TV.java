@@ -7,70 +7,71 @@ public class TV {
 	private int precio = 500;
 	private int volumen = 1;
 	boolean estado;
-	static int numTV;
+	public static int numTV;
 	
 	public TV(Marca marca, boolean estado) {
 		this.marca = marca;
 		this.estado = estado;
+		numTV++;
 	}
 	
-	void setMarca(Marca marca) {
+	public void setMarca(Marca marca) {
 		this.marca = marca;
 	}
 	
-	Marca getMarca() {
+	public Marca getMarca() {
 		return marca;
 	}
 	
-	void setControl(Control control) {
+	public void setControl(Control control) {
 		this.control = control;
 	}
 	
-	Control getControl() {
+	public Control getControl() {
 		return control;
 	}
 	
-	void setVolumen(int volumen) {
+	public void setVolumen(int volumen) {
 		this.volumen = volumen;
 	}
 	
-	int getVolumen() {
+	public int getVolumen() {
 		return volumen;
 	}
 	
-	void setPrecio(int precio) {
+	public void setPrecio(int precio) {
 		this.precio = precio;
 	}
 	
-	int getPrecio() {
+	public int getPrecio() {
 		return precio;
 	}
 	
-	void setCanal(int canal) {
+	public void setCanal(int canal) {
 		this.canal = canal;
 	}
 	
-	int getCanal() {
+	public int getCanal() {
 		return canal;
 	}
 	
-	static int getNumTV() {
+	public static int getNumTV() {
 		return numTV;
 	}
 	
-	void turnOn() {
+	public void turnOn() {
 		estado = true;
 	}
 	
-	void turnOff() {
+	public void turnOff() {
 		estado = false;
 	}
 	
-	boolean getEstado() {
+	public boolean getEstado() {
 		return estado;
 	}
 	
-	void canalUp() {
+	public void canalUp() {
 		if (estado == true) {
 			if (canal >= 1 && canal <= 120) {
 				canal++;
@@ -78,7 +79,7 @@ public class TV {
 		}
 	}
 	
-	void canalDown() {
+	public void canalDown() {
 		if (estado == true) {
 			if (canal >= 1 && canal <= 120) {
 				canal--;
@@ -86,7 +87,7 @@ public class TV {
 		}
 	}
 	
-	void volumenUp() {
+	public void volumenUp() {
 		if (estado == true) {
 			if (volumen >= 0 && volumen <= 7) {
 				volumen++;
@@ -94,7 +95,7 @@ public class TV {
 		}
 	}
 	
-	void volumenDown() {
+	public void volumenDown() {
 		if (estado == true) {
 			if (volumen >= 0 && volumen <= 7) {
 				volumen--;
