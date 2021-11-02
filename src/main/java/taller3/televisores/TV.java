@@ -7,7 +7,7 @@ public class TV {
 	private int precio = 500;
 	private int volumen = 1;
 	boolean estado;
-	public static int numTV;
+	private static int numTV;
 	
 	public TV(Marca marca, boolean estado) {
 		this.marca = marca;
@@ -54,7 +54,11 @@ public class TV {
 	public int getCanal() {
 		return canal;
 	}
-	
+
+	public static void setNumTV(int _numTV) {
+		numTV = _numTV;
+	}
+
 	public static int getNumTV() {
 		return numTV;
 	}
