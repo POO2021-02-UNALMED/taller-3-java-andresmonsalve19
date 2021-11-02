@@ -28,7 +28,11 @@ public class Control {
 	}
 	
 	public void setCanal(int canal) {
-		tv.setCanal(canal);
+		if (tv.estado == true) {
+			if (canal >= 1 && canal <= 120) {
+				tv.setCanal(canal);
+			}
+		}	
 	}
 	
 	public void enlazar(TV tv) {
@@ -36,11 +40,11 @@ public class Control {
 		tv.setControl(this);
 	}
 	
-	public void setTv(TV tv) {
+	public void setTV(TV tv) {
 		this.tv = tv;
 	}
 	
-	public TV getTv() {
+	public TV getTV() {
 		return tv;
 	}
 }
